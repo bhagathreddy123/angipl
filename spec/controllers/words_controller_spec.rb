@@ -18,7 +18,7 @@ RSpec.describe WordsController, type: :controller do
   
   context 'when some words are assigned' do
     it 'assigns @words' do
-      word = Word.create(name: 'dog', language: 'en')
+      word = create(:word)
       get :index
       expect(assigns(:words)).to eq([word])
     end
